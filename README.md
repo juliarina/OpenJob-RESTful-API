@@ -10,6 +10,8 @@ This project was developed as the final submission for the "Belajar Fundamental 
 
 ### User Management
 - User profile management
+
+### Documents
 - Upload supporting documents
 
 ### Companies
