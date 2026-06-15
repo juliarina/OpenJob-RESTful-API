@@ -1,6 +1,17 @@
 # Open Job API
 This project was developed as the final submission for the "Belajar Fundamental Back-End dengan JavaScript" course on Dicoding.
 
+## Tech Stack
+- Node.js
+- Express.js
+- PostgreSQL
+- Redis
+- RabbitMQ
+- JWT Authentication
+- Joi Validation
+- Multer
+- Nodemailer
+
 ## Features
 
 ### Authentication
@@ -37,17 +48,6 @@ This project was developed as the final submission for the "Belajar Fundamental 
 
 ### Performance
 - Redis caching support
-
-## Tech Stack
-- Node.js
-- Express.js
-- PostgreSQL
-- Redis
-- RabbitMQ
-- JWT Authentication
-- Joi Validation
-- Multer
-- Nodemailer
 
 ## Project Structure
 
