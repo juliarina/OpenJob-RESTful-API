@@ -38,8 +38,6 @@ This project was developed as the final submission for the "Belajar Fundamental 
 ### Performance
 - Redis caching support
 
----
-
 ## Tech Stack
 - Node.js
 - Express.js
@@ -50,8 +48,6 @@ This project was developed as the final submission for the "Belajar Fundamental 
 - Joi Validation
 - Multer
 - Nodemailer
-
----
 
 ## Project Structure
 
@@ -76,7 +72,83 @@ Handles API requests, database operations, caching, and message publishing.
 ### Consumer
 Processes RabbitMQ messages and sends email notifications.
 
----
+## API Endpoints
+
+### Users
+
+| Method | Endpoint   | Description            |
+| ------ | ---------- | ---------------------- |
+| POST   | /users     | Register new user      |
+| GET    | /users/:id | Get user profile by ID |
+
+### Authentication
+
+| Method | Endpoint         | Description          |
+| ------ | ---------------- | -------------------- |
+| POST   | /authentications | Login                |
+| PUT    | /authentications | Refresh access token |
+| DELETE | /authentications | Logout               |
+
+### Profile
+
+| Method | Endpoint              | Description                |
+| ------ | --------------------- | -------------------------- |
+| GET    | /profile              | Get logged-in user profile |
+| GET    | /profile/applications | Get my applications        |
+| GET    | /profile/bookmarks    | Get my bookmarks           |
+
+### Companies
+
+| Method | Endpoint       | Description        |
+| ------ | -------------- | ------------------ |
+| GET    | /companies     | List all companies |
+| GET    | /companies/:id | Get company detail |
+| POST   | /companies     | Create company     |
+| PUT    | /companies/:id | Update company     |
+| DELETE | /companies/:id | Delete company     |
+
+### Categories
+
+| Method | Endpoint        | Description         |
+| ------ | --------------- | ------------------- |
+| GET    | /categories     | List all categories |
+| GET    | /categories/:id | Get category detail |
+| POST   | /categories     | Create category     |
+| PUT    | /categories/:id | Update category     |
+| DELETE | /categories/:id | Delete category     |
+
+### Jobs
+
+| Method | Endpoint                   | Description      |
+| ------ | -------------------------- | ---------------- |
+| GET    | /jobs                      | List all jobs    |
+| GET    | /jobs/:id                  | Get job detail   |
+| GET    | /jobs/company/:companyId   | Jobs by company  |
+| GET    | /jobs/category/:categoryId | Jobs by category |
+| POST   | /jobs                      | Create job       |
+| PUT    | /jobs/:id                  | Update job       |
+| DELETE | /jobs/:id                  | Delete job       |
+
+### Applications
+
+| Method | Endpoint                   | Description               |
+| ------ | -------------------------- | ------------------------- |
+| POST   | /applications              | Apply for job             |
+| GET    | /applications              | List all applications     |
+| GET    | /applications/:id          | Get application detail    |
+| GET    | /applications/user/:userId | Applications by user      |
+| GET    | /applications/job/:jobId   | Applications by job       |
+| PUT    | /applications/:id          | Update application status |
+| DELETE | /applications/:id          | Delete application        |
+
+### Bookmarks
+
+| Method | Endpoint                  | Description         |
+| ------ | ------------------------- | ------------------- |
+| POST   | /jobs/:jobId/bookmark     | Create bookmark     |
+| GET    | /jobs/:jobId/bookmark/:id | Get bookmark detail |
+| DELETE | /jobs/:jobId/bookmark     | Delete bookmark     |
+| GET    | /bookmarks                | Get all bookmarks   |
 
 ## Prerequisites
 
@@ -86,8 +158,6 @@ Before running the project, make sure you have:
 - PostgreSQL
 - Redis
 - RabbitMQ
-
----
 
 ## Installation
 
@@ -113,8 +183,6 @@ npm install
 cd ../OpenJob-RESTful-API-v2-consumer
 npm install
 ```
-
----
 
 ## Environment Variables
 
@@ -159,8 +227,6 @@ MAIL_PASSWORD=your_smtp_password
 RABBITMQ_SERVER=amqp://localhost
 ```
 
----
-
 ## Database Migration
 
 Run migrations from the producer directory:
@@ -168,8 +234,6 @@ Run migrations from the producer directory:
 ```bash
 npm run migrate up
 ```
-
----
 
 ## Running the Application
 
